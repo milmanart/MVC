@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const fs = require('fs');
 const path = require('path');
+const fs = require('fs');
 
 router.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'views', 'home.html'));
@@ -9,19 +9,19 @@ router.get('/', (req, res) => {
 
 router.post('/student', (req, res) => {
     const studentData = req.body;
-
-    // Zapis danych do pliku .txt
     const studentId = studentData.code;
-    fs.writeFile(path.join(__dirname, '..', 'student_data', `${studentId}.txt`), JSON.stringify(studentData), (err) => {
+
+
+    fs.writeFile(`student_data/${studentId}.txt`, JSON.stringify(studentData), (err) => {
         if (err) {
             console.error(err);
             res.status(500).send('Błąd podczas zapisywania danych studenta.');
             return;
         }
-        console.log('Dane studenta zostały pomyślnie zapisane w pliku.');
+        console.log('Dane studenta zostały pomyślnie zapisane.');
     });
 
-    // Przekierowanie na stronę student.html z przekazanymi danymi
+
     res.render('student', { student: studentData });
 });
 

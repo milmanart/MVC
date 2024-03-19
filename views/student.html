@@ -1,13 +1,17 @@
-<!-- views/student.html -->
-
 <!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strona studenta</title>
+    <title>Profil studenta</title>
 </head>
 <body>
-<div>Strona studenta</div>
+<h1>Profil studenta</h1>
+<p>Numer albumu: <%= student.code %></p>
+<p>Imię: <%= student.name %></p>
+<p>Nazwisko: <%= student.lastname %></p>
+<p>Płeć: <%= student.gender %></p>
+<p>Wiek: <%= student.age %></p>
+<p>Kierunek studiów: <%= student.studyField %></p>
 </body>
 </html>
