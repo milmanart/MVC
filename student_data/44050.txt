@@ -1,0 +1,1 @@
+{"code":"44050","name":"Artem","lastname":"Milman","gender":"male","age":"25","studyField":"Informatyka"}
