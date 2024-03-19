@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz dla studenta</title>
+</head>
+<body>
+<h2>Formularz dla studenta</h2>
+<form action="/student" method="post">
+    <label for="code">Numer albumu studenckiego:</label>
+    <input type="number" id="code" name="code" required><br><br>
+
+    <label for="name">Imię:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="lastname">Nazwisko:</label>
+    <input type="text" id="lastname" name="lastname" required><br><br>
+
+    <label for="gender">Płeć:</label>
+    <select id="gender" name="gender">
+        <option value="male">Mężczyzna</option>
+        <option value="female">Kobieta</option>
+        <option value="other">Inne</option>
+    </select><br><br>
+
+    <label for="age">Wiek:</label>
+    <input type="number" id="age" name="age" required min="0"><br><br>
+
+    <label for="studyField">Kierunek studiów:</label>
+    <input type="text" id="studyField" name="studyField" required><br><br>
+
+    <button type="submit">Wyślij</button>
+</form>
+</body>
+</html>
